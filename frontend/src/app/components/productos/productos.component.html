@@ -1,1 +1,21 @@
-<p>productos works!</p>
+<div class="w-75">
+    <div class="row row-cols-1 row-cols-md-2 d-flex">
+        <div class="col-md-9">
+            <div class="row row-cols-1 row-cols-md-3 g-2">
+                <div class="col" *ngFor="let producto of productos">
+                    <div class="card h-100">
+                        <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.nombre}}">
+                        <div class="card-body">
+                            <p class="text-muted">{{producto.nombre}}</p>
+                            <p class="card-text">{{producto.descripcion}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img src="../../../assets/img/Vintascope.jpg" class="h-100" style="width: -webkit-fill-available;"
+                alt="coca-cola">
+        </div>
+    </div>
+</div>
