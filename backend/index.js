@@ -13,6 +13,7 @@ app.use('/api/producto', require('./routes/producto.route'));
 app.use('/api/espectador', require('./routes/espectador.route'));
 app.use('/api/ticket', require('./routes/ticket.route'));
 app.use('/api/transaccion', require('./routes/transaccion.route'));
+app.use('/api/tipoCategoria', require('./routes/tipoCategoria.route'));
 
 //setting
 app.set('port', process.env.PORT || 3000);

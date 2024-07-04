@@ -7,13 +7,14 @@ ticketCtrl.crearTicket = async (req, res) => {
     await ticket.save();
     res.json({'status': '1', 'msg': 'Ticket guardado.'})
   } catch (error) {
+    console.log(error);
     res.status(400).json({'status': '0', 'msg': 'Error procesando la operacion'}) 
   }
 };
 
 ticketCtrl.obtenerTickets = async (req, res) => {
   try {
-    const tickets = await Ticket.find().populate('espectador');
+    const tickets = await Ticket.find().populate('espectador').populate('tipoCategoria');
     res.json(tickets);
   } catch (error) {
     res.status(400).json({'status': '0', 'msg': 'Error procesando la operacion'}) 

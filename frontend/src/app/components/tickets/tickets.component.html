@@ -1,0 +1,23 @@
+<div class="container" *ngFor="let ticket of tickets">
+    <div class="d-grid justify-content-center text-center">
+        <h4>Datos Tickets</h4>
+        <p>Precio Ticket: {{ticket.precioTicket}}</p>
+        <p>Categoria Espectador: {{ticket.categoriaEspectador}}</p>
+        <p>Fecha Compra: {{ticket.fechaCompra}}</p>
+        <br>
+        <hr>
+        <h4>Datos Espectador</h4>
+        <p>Nombre: {{ticket.espectador.nombre}}</p>
+        <p>Apellido: {{ticket.espectador.apellido}}</p>
+        <p>DNI: {{ticket.espectador.dni}}</p>
+        <p>Email: {{ticket.espectador.email}}</p>
+        <br>
+        <hr>
+        <h4>Datos Tipo Categoria</h4>
+        <p>Nombre: {{ticket.tipoCategoria.nombre}}</p>
+        <p>Descripcion: {{ticket.tipoCategoria.descripcion}}</p>
+
+        <br><br>
+        <hr><hr>
+    </div>
+</div>
